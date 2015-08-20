@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     concat = require('gulp-concat'),
     rename = require('gulp-rename'),
+    stripDebug = require('gulp-strip-debug'),
     sizereport = require('gulp-sizereport'),
     browserSync = require('browser-sync').create();
 
@@ -16,14 +17,16 @@ function handleError() {
 
 gulp.task('browser-sync', function() {
     browserSync.init({
-        port:3004,
         ghostMode: {
             scroll: true
         },
+        proxy:true,
+        server:true,
         open:false,
         callbacks: {
             ready: function (err, bs) {
-                require("opn")("http://localhost:3004/example.html");//"http://client-demo-b.dev:3001"
+              var port = bs.options.get("port")
+              require("opn")("http://localhost:"+port+"/index.html");
             }
         }
     });
@@ -32,17 +35,27 @@ gulp.task('browser-sync', function() {
 
 gulp.task('build', function() {
   gulp.src('src/*.js')
-    .pipe(concat('jquery.favico-spinner.js'))
+    .pipe(concat('jquery.favico-spinner.dev.js'))
     .pipe(jshint())
     .pipe(jshint.reporter('default'))
       .on('error', handleError)
       .on('error', notify.onError())
-    .pipe(uglify())
+    .pipe(gulp.dest('./'))
+    .pipe(rename(function (path) {
+      path.basename = path.basename.replace('.dev','');
+    }))
+    .pipe(stripDebug())
+    .pipe(uglify({
+      mangle: {
+        sort: true,
+        toplevel:true
+      }
+    }))
     .pipe(gulp.dest('./'))
     .pipe(sizereport({
         gzip: true
     }))
-    .pipe(browserSync.stream({match: '*.js'}));
+    .pipe(browserSync.stream({once: true}));
 });
 
 
