@@ -6,19 +6,19 @@ For when you want to give users a subtle extra hint that something big is loadin
 Just include the plugin, start it, stop it.
 
 ```
-$.favspin.on()
+$.favispin.on()
 ```
 
 ```
-$.favspin.off()
+$.favispin.off()
 ```
 
 ```
-$.favspin.ison()//-> returns true or false
+$.favispin.ison()//-> returns true or false
 ```
 
 ```
-$.favspinner.on();
+$.favispin.on();
 $.ajax({
     /*....*/
     beforeSend: $.favspinner.on
@@ -27,6 +27,6 @@ $.ajax({
 ```
 
 Todos:
-* disable for desktop Safari and all mobile browsers (no favicons, no point)
+* disable for all mobile browsers (no favicons, no point)
 * fix the gradient rotation
-* comes in one choice of colors
+* comes in one convienient choice of colors
