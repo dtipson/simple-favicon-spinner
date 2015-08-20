@@ -1,6 +1,5 @@
 <!doctype html>
 <html><head>
-<meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" type="image/x-icon" href="https://help.github.com/assets/images/site/favicon.ico">
@@ -17,7 +16,6 @@
   <script>
     (function($){
       $('button').on('click',function(e){
-        console.log(e,$.favispin.ison());
         var $btn = $(this);
         if($.favispin.ison()){
           $.favispin.off();

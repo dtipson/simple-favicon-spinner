@@ -25,7 +25,7 @@ gulp.task('browser-sync', function() {
         open:false,
         callbacks: {
             ready: function (err, bs) {
-              var port = bs.options.get("port")
+              var port = bs.options.get("port");
               require("opn")("http://localhost:"+port+"/index.html");
             }
         }
