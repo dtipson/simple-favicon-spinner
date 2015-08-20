@@ -5,7 +5,7 @@
       $head,
       $ico,
       title,
-      textspinner = (document.characterSet==="UTF-8"?'◐◓◑◒':'+x').split(''),//terrible backup, but we can't encode ISO in a UTF file, right?
+      textspinner = (document.characterSet.toUpperCase()==="UTF-8"?'◐◓◑◒':'+x').split(''),//terrible backup, but we can't encode ISO in a UTF file, right?
       textspinnerln = textspinner.length,
       xIconString = 'image/x-icon',
       xIconSelector = '[type="'+xIconString+'"]',
