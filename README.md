@@ -23,5 +23,5 @@ $.ajax({
     /*....*/
     beforeSend: $.favspinner.on
 })
-    .always($.favspinner.off)
+    .always($.favspinner.off);
 ```
