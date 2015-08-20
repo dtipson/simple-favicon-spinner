@@ -25,3 +25,8 @@ $.ajax({
 })
     .always($.favspinner.off);
 ```
+
+Todos:
+* disable for desktop Safari and all mobile browsers (no favicons, no point)
+* fix the gradient rotation
+* comes in one choice of colors
