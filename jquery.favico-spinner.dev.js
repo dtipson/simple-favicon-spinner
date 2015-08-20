@@ -24,7 +24,6 @@
       $ico = $head.find('[rel*="icon"]');
       title = document.title;
       no_favicon_support = (
-        true ||
         !window.CanvasRenderingContext2D || // don't run without canvas support
         !$ico.length || // also don't run if no icon already exists, otherwise spinner gets cached as THE site icon
         (navigator.vendor && navigator.vendor.indexOf('Apple') > -1) || // also don't run on anything Apple: Safari doesn't show favicons in tabs
