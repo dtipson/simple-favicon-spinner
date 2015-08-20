@@ -6,7 +6,7 @@
     <title>Simple-favicon-spinner by dtipson</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.0.0-alpha1.min.js"></script>
     <script src="javascripts/respond.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -16,6 +16,50 @@
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="icon" type="image/x-icon" href="https://help.github.com/assets/images/site/favicon.ico">
+
+    <style>
+    .demo-btn{
+      color: #FFF;
+      border: 1px solid #5D910B;
+      background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #93BD20), color-stop(100%, #659E10));
+      background: -webkit-linear-gradient(#93BD20, #659E10);
+      background: -moz-linear-gradient(#93bd20, #659e10);
+      background: -o-linear-gradient(#93bd20, #659e10);
+      background: -ms-linear-gradient(#93bd20, #659e10);
+      background: linear-gradient(#93BD20, #659E10);
+      -moz-border-radius: 2px;
+      -webkit-border-radius: 2px;
+      -o-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -khtml-border-radius: 2px;
+      border-radius: 2px;
+      -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.7);
+      -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.7);
+      -o-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.7);
+      box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.7);
+      background-color: #93BD20;
+      padding: 10px 12px;
+      margin-top: 6px;
+      line-height: 14px;
+      font-size: 14px;
+      display: inline-block;
+      text-align: center;
+    }
+    .demo-btn:hover{
+      background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #749619), color-stop(100%, #527F0E));
+      background: -webkit-linear-gradient(#749619, #527F0E);
+      background: -moz-linear-gradient(#749619, #527f0e);
+      background: -o-linear-gradient(#749619, #527f0e);
+      background: -ms-linear-gradient(#749619, #527f0e);
+      background: linear-gradient(#749619, #527F0E);
+      background-color: #659E10;
+      border: 1px solid #527F0E;
+      -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0);
+      -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0);
+      -o-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0);
+      box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0);
+    }
+    </style>
   </head>
   <body>
       <div id="header">
@@ -38,13 +82,13 @@
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
         </div>
 
-        <div><div class="row" style="text-align: center;padding:10% 0 0;"><button class="btn btn-lg btn-primary">Spin a bit</button></div></div>
-
-
         <h1>
 <a id="simple-way-to-fake-a-spinny-favicon-loading-indicator" class="anchor" href="#simple-way-to-fake-a-spinny-favicon-loading-indicator" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simple Way to Fake a spinny favicon "Loading Indicator"</h1>
 
 <p>For when you want to give users a subtle extra hint that something big is loading in a page.</p>
+
+<p><button class="demo-btn">Spin a bit</button></p>
+
 
 <p>Just include the plugin, start it, stop it.</p>
 
@@ -76,7 +120,7 @@ $.ajax({
 
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-  <script src="https://code.jquery.com/jquery-3.0.0-alpha1.min.js"></script>
+
   <script src="javascripts/favico-spinner.js"></script>
   <script>
     (function($){
