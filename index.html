@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="stylesheets/ie.css">
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <link rel="icon" type="image/x-icon" href="https://help.github.com/assets/images/site/favicon.ico">
   </head>
   <body>
       <div id="header">
@@ -37,6 +37,9 @@
           <span class="credits left">Project maintained by <a href="https://github.com/dtipson">dtipson</a></span>
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
         </div>
+
+        <div><div class="row" style="text-align: center;padding:10% 0 0;"><button class="btn btn-lg btn-primary">Spin a bit</button></div></div>
+
 
         <h1>
 <a id="simple-way-to-fake-a-spinny-favicon-loading-indicator" class="anchor" href="#simple-way-to-fake-a-spinny-favicon-loading-indicator" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simple Way to Fake a spinny favicon "Loading Indicator"</h1>
@@ -73,6 +76,22 @@ $.ajax({
 
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+  <script src="https://code.jquery.com/jquery-3.0.0-alpha1.min.js"></script>
+  <script src="javascripts/favico-spinner.js"></script>
+  <script>
+    (function($){
+      $('button').on('click',function(){
+        var $btn = $(this);
+        if($.favspin.ison()){
+          $.favspin.off();
+          $btn.html('Spin a bit');
+        }
+        else{
+          $.favspin.on();
+          $btn.html('Stop');
+        }
+      });
+    })(jQuery);
+  </script>
   </body>
 </html>
