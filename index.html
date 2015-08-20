@@ -91,21 +91,21 @@
 
 <p>Just include the plugin, start it, stop it.</p>
 
-<pre><code>$.favspin.on()
+<pre><code>$.favispin.on()
 </code></pre>
 
-<pre><code>$.favspin.off()
+<pre><code>$.favispin.off()
 </code></pre>
 
-<pre><code>$.favspin.ison()//-&gt; returns true or false
+<pre><code>$.favispin.ison()//-&gt; returns true or false
 </code></pre>
 
-<pre><code>$.favspinner.on();
+<pre><code>
 $.ajax({
     /*....*/
-    beforeSend: $.favspinner.on
+    beforeSend: $.favispin.on
 })
-    .always($.favspinner.off);
+    .always($.favispin.off);
 </code></pre>
 
 <p>Todos:</p>
@@ -120,17 +120,17 @@ $.ajax({
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
 
-  <script src="javascripts/favico-spinner.js"></script>
+  <script src="javascripts/jquery.favico-spinner.js"></script>
   <script>
     (function($){
       $('button').on('click',function(){
         var $btn = $(this);
-        if($.favspin.ison()){
-          $.favspin.off();
+        if($.favispin.ison()){
+          $.favispin.off();
           $btn.html('Spin a bit');
         }
         else{
-          $.favspin.on();
+          $.favispin.on();
           $btn.html('Stop');
         }
       });
