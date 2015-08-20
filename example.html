@@ -1,0 +1,36 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<title>Super Simple Example</title>
+
+</head><body>
+<div class="container">
+  <div class="row" style="text-align: center;padding:10% 0 0;"><button class="btn btn-lg btn-primary">Spin a bit</button></div>
+</div>
+  <script src="https://code.jquery.com/jquery-3.0.0-alpha1.min.js"></script>
+  <script src="jquery.favico-spinner.js"></script>
+  <script>
+    (function($){
+      $('button').on('click',function(){
+        var $btn = $(this);
+        if($.favspin.ison()){
+          $.favspin.off();
+          $btn.html('Spin a bit');
+        }
+        else{
+          $.favspin.on();
+          $btn.html('Stop');
+        }
+      });
+    })(jQuery);
+  </script>
+<script type='text/javascript' id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3004/browser-sync/browser-sync-client.2.8.2.js'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+</body>
+</html>
