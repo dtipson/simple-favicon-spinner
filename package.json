@@ -1,0 +1,25 @@
+{
+  "name": "simple-favicon-spinner",
+  "version": "0.1.0",
+  "description": "Simple little canvas-to-image trick to simulate one part of the \"busy\" state for browsers.",
+  "main": "fav-spinner.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dtipson/simple-favicon-spinner.git"
+  },
+  "keywords": [
+    "busy",
+    "state",
+    "loading",
+    "indicator"
+  ],
+  "author": "Drew Tipson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dtipson/simple-favicon-spinner/issues"
+  },
+  "homepage": "https://github.com/dtipson/simple-favicon-spinner"
+}
