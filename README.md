@@ -5,9 +5,13 @@ For when you want to give users a subtle extra hint that something big is loadin
 
 Just include the plugin, start it, stop it.
 
-```$.favspinner.on()```
+```
+$.favspinner.on()
+```
 
-```$.favspinner.off()```
+```
+$.favspinner.off()
+```
 
 ```
 $.favspinner.on();
