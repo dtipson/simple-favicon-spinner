@@ -16,7 +16,8 @@
   <script src="jquery.favico-spinner.dev.js"></script>
   <script>
     (function($){
-      $('button').on('click',function(){
+      $('button').on('click',function(e){
+        console.log(e,$.favispin.ison());
         var $btn = $(this);
         if($.favispin.ison()){
           $.favispin.off();

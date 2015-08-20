@@ -10,9 +10,9 @@
       linewidth = 0.15*size,
       radius = size*0.375,//spinner relative to size of icon
       hsize = size/2,
-      stopped = false,
+      stopped = true,//start stopped
       rotation = 0,
-      rotationFactor = 0.025;
+      rotationFactor = 0.025;//rotation in each "frame"
 
   //we want these cached, not called every time favspin is called, but script could be loaded in the head
   $(document).ready(function(){
@@ -108,7 +108,7 @@
 
   //extend this function so it has helper methods
   $.extend(favispin,{
-    ison: function(){return !stopped;},
+    ison: function(){ return !stopped; },
     on:function(){favispin();},//protect from any arguments
     off:function(){favispin(true);}//protect from any arguments
   });
