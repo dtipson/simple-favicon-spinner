@@ -3,9 +3,11 @@
       canvas,
       ctx,
       $head,
-      $ico,
+      $ico,//'"'
       title,
-      textspinner = (document.characterSet.toUpperCase()==="UTF-8"?'◐◓◑◒':'+x').split(''),//terrible backup, but we can't encode ISO in a UTF file, right?
+      textspinner = document.characterSet.toUpperCase()==="UTF-8"&&false?
+        '◐◓◑◒'.split(''):
+        ['.o0','.0o','0o.','o.0'],
       textspinnerln = textspinner.length,
       xIconString = 'image/x-icon',
       xIconSelector = '[type="'+xIconString+'"]',
@@ -114,7 +116,7 @@
       if(!stop){
           stopped = false;
           if(no_favicon_support){
-            animate(updateTitle, 3);
+            animate(updateTitle, 10);
           }else{
             if(!canvas){
               initCanvas();
